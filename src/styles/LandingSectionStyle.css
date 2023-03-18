@@ -1,0 +1,26 @@
+#LandingSection {
+    display: flex;
+    background: url("https://i.imgur.com/796RdJA.jpg");
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.socialmedia
+{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin:10px
+    
+}
+.socialmedia > button
+{
+    margin: 5px;
+}
+.socialmedia > a
+{
+    color: white;
+    margin: 10px;
+}

@@ -1,0 +1,74 @@
+.navheader {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+}
+
+.contactbutton {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.logo {
+    object-fit: contain;
+    width: 20%;
+}
+
+.navlinks {
+    display: flex;
+}
+
+.navlinks>a {
+    margin: 10px;
+    color: white;
+}
+
+.contactLink {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        object-fit: contain;
+        width: 60%;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        margin: 5px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(7.5px);
+        width: 0px;
+        height: calc(100vh - 60px);
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+    }
+
+    .contactLink {
+        display: block;
+    }
+
+    .navlinks.active {
+        width: 270px;
+    }
+
+    .contactbutton {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
