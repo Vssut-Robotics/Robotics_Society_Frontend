@@ -21,6 +21,7 @@ function Nav() {
             <Link to="#AboutSection">About</Link>
             <Link to="#ProjectSection">Project</Link>
             <Link to="#AchievmentSection">Achievment</Link>
+            <Link to="#TeamSection">Team</Link>
             <Link to="#ContactSection" className="contactLink">
               <Button sx={{ bgcolor: "#610000" }} variant="contained">
                 Contact
@@ -32,7 +33,14 @@ function Nav() {
           </div>
           <div className="contactbutton">
             <Link to="#ContactSection">
-              <Button sx={{ bgcolor: "#610000" }} variant="contained">
+              <Button
+                sx={{
+                  borderColor: "white",
+                  color: "white",
+                  borderWidth: "4",
+                }}
+                variant="outlined"
+              >
                 Contact
               </Button>
             </Link>
