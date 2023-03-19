@@ -23,7 +23,7 @@ function Nav() {
             <Link to="#AchievmentSection">Achievment</Link>
             <Link to="#TeamSection">Team</Link>
             <Link to="#ContactSection" className="contactLink">
-              <Button sx={{ bgcolor: "#610000" }} variant="contained">
+              <Button sx={{ bgcolor: "#FFOOC" }} variant="contained">
                 Contact
               </Button>
             </Link>
@@ -38,6 +38,7 @@ function Nav() {
                   borderColor: "white",
                   color: "white",
                   borderWidth: "4",
+                  // bgcolor:"#091527"
                 }}
                 variant="outlined"
               >

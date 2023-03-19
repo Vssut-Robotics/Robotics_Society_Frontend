@@ -6,12 +6,11 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
-import Particle from '../components/Particle'
+import Particle from "../components/Particle";
 
 function LandingSection() {
   return (
     <section id="LandingSection">
-      
       <div className="tagline">
         <img src="https://i.imgur.com/P0iABw4.png" alt="" />
       </div>
@@ -19,47 +18,24 @@ function LandingSection() {
         <img src="https://i.imgur.com/TDPSh8f.png" alt="" srcset="" />
       </div>
       <div className="socialmedia">
-        {/* <YouTubeIcon
-          className="socialIcon"
+        <a
+          className="sociaLinks"
           href="https://www.youtube.com/c/VSSUTROBOTICS"
-          target="_blank"
-        /> */}
-        <Button sx={{ color: "#fff" }} variant="outline">
-          <a
-            className="sociaLinks"
-            href="https://www.youtube.com/c/VSSUTROBOTICS"
-          >
-            Youtube
-          </a>
-        </Button>
-        {/* <LinkedInIcon
-          className="socialIcon"
+        >
+          Youtube
+        </a>
+        <a
+          className="sociaLinks"
           href="https://www.instagram.com/vssut_robotics/?hl=en"
-          target="_blank"
-          sx={{ color: "white" }}
-        /> */}
-        <Button sx={{ color: "#fff" }} variant="outline">
-          <a
-            className="sociaLinks"
-            href="https://www.instagram.com/vssut_robotics/?hl=en"
-          >
-            Instagram
-          </a>
-        </Button>
-        <Button sx={{ color: "#fff" }} variant="outline">
-          {/* <FacebookIcon
-            className="socialIcon"
-            target="_blank"
-            sx={{ color: "#3b5998" }}
-            href="https://www.facebook.com/vssutrobotics/"
-          /> */}
-          <a
-            className="sociaLinks"
-            href="https://www.facebook.com/vssutrobotics/"
-          >
-            Facebook
-          </a>
-        </Button>
+        >
+          Instagram
+        </a>
+        <a
+          className="sociaLinks"
+          href="https://www.facebook.com/vssutrobotics/"
+        >
+          Facebook
+        </a>
       </div>
     </section>
   );

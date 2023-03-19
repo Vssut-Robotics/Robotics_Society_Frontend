@@ -35,7 +35,7 @@ function Particle() {
               value: "#fff",
             },
             shape: {
-              type: "star",
+              type: "circle",
               options: {
                 sides: 5,
               },
@@ -72,7 +72,7 @@ function Particle() {
             },
             line_linked: {
               enable: true,
-              distance: 600,
+              distance: 900,
               color: "#ffffff",
               opacity: 0.4,
               width: 2,
@@ -111,7 +111,7 @@ function Particle() {
                 },
               },
               bubble: {
-                distance: 400,
+                distance: 800,
                 size: 40,
                 duration: 2,
                 opacity: 8,
@@ -130,7 +130,7 @@ function Particle() {
           },
           retina_detect: true,
           background: {
-            color: "#111",
+            color: "#091527",
             image: "",
             position: "50% 50%",
             repeat: "no-repeat",

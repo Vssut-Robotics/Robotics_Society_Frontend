@@ -1,13 +1,11 @@
 import React from 'react'
 import { Flex, Box } from "@chakra-ui/react";
-
+import "../styles/AboutSectionStyle.css"
 
 function AboutSection() {
   return (
     <section id='AboutSection'>
-      <Flex>
-        <Box  w="150px" h="870px" bg="green"></Box>        
-      </Flex>
+  
     </section>
   )
 }
