@@ -6,7 +6,7 @@ function AboutSection() {
   return (
     <section id='AboutSection'>
       <Flex>
-        <Box  w="150px" h="1000px" bg="green"></Box>        
+        <Box  w="150px" h="870px" bg="green"></Box>        
       </Flex>
     </section>
   )

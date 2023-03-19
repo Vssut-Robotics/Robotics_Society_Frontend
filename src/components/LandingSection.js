@@ -6,23 +6,25 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
+import Particle from '../components/Particle'
 
 function LandingSection() {
   return (
     <section id="LandingSection">
+      
       <div className="tagline">
         <img src="https://i.imgur.com/P0iABw4.png" alt="" />
       </div>
       <div className="landing_img">
-        <img src="https://i.imgur.com/i0oVIwY.png" alt="" srcset="" />
+        <img src="https://i.imgur.com/TDPSh8f.png" alt="" srcset="" />
       </div>
       <div className="socialmedia">
+        {/* <YouTubeIcon
+          className="socialIcon"
+          href="https://www.youtube.com/c/VSSUTROBOTICS"
+          target="_blank"
+        /> */}
         <Button sx={{ color: "#fff" }} variant="outline">
-          <YouTubeIcon
-            className="socialIcon"
-            href="https://www.youtube.com/c/VSSUTROBOTICS"
-            target="_blank"
-          />
           <a
             className="sociaLinks"
             href="https://www.youtube.com/c/VSSUTROBOTICS"
@@ -30,13 +32,13 @@ function LandingSection() {
             Youtube
           </a>
         </Button>
+        {/* <LinkedInIcon
+          className="socialIcon"
+          href="https://www.instagram.com/vssut_robotics/?hl=en"
+          target="_blank"
+          sx={{ color: "white" }}
+        /> */}
         <Button sx={{ color: "#fff" }} variant="outline">
-          <LinkedInIcon
-            className="socialIcon"
-            href="https://www.instagram.com/vssut_robotics/?hl=en"
-            target="_blank"
-            sx={{ color: "white" }}
-          />
           <a
             className="sociaLinks"
             href="https://www.instagram.com/vssut_robotics/?hl=en"
@@ -45,12 +47,12 @@ function LandingSection() {
           </a>
         </Button>
         <Button sx={{ color: "#fff" }} variant="outline">
-          <FacebookIcon
+          {/* <FacebookIcon
             className="socialIcon"
             target="_blank"
             sx={{ color: "#3b5998" }}
             href="https://www.facebook.com/vssutrobotics/"
-          />
+          /> */}
           <a
             className="sociaLinks"
             href="https://www.facebook.com/vssutrobotics/"
