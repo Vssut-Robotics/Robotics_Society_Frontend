@@ -8,6 +8,8 @@ import ContactSection from "./components/ContactSection";
 import TeamSection from "./components/TeamSection";
 import Particle from "./components/Particle";
 
+
+
 function App() {
   return (
     <div className="App">

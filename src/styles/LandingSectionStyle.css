@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap');
+
 #LandingSection {
     backdrop-filter: blur(1.4px);
-    height: 680px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
-
+/*
 .MuiButton-contained {
     text-transform: lowercase !important;
 }
@@ -139,4 +145,44 @@
     }
 
 
+} */
+
+
+.logos {
+    display: flex;
 }
+
+.vssutlogo {
+    object-fit: contain;
+    width: 100px;
+}
+
+.clublogo {
+    object-fit: contain;
+    width: 100px;
+}
+
+.socialmedia>a {
+    color: white
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title p {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+
+}
+

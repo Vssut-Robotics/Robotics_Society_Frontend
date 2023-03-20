@@ -38,7 +38,7 @@ function Nav() {
                   borderColor: "white",
                   color: "white",
                   borderWidth: "4",
-                  // bgcolor:"#091527"
+                  //  bgcolor:"#091527"
                 }}
                 variant="outlined"
               >
