@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Box } from "@chakra-ui/react";
 
+
 function ProjectSection() {
   return (
     <section id="ProjectSection">

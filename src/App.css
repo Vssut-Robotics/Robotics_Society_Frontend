@@ -4,10 +4,9 @@
   text-transform: lowercase !important;
 }
 
-/* .App {
-
-  text-align: center;
-} */
+.spinner {
+  height: 200px;
+}
 
 .navbar {
   position: fixed;

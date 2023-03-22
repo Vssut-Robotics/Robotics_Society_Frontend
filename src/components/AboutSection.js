@@ -6,31 +6,11 @@ import { Container, Typography } from "@mui/material";
 import "@fontsource/gfs-neohellenic";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Parallax } from "react-scroll-parallax";
 
 function AboutSection() {
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
-  useEffect(() => {
-    console.log(inView);
-    if (inView) {
-      animation.start({
-        x: 0,
-        transition: { type: "spring", duration: 1, bounce: 0.3 },
-      });
-    }
-    if (!inView) {
-      animation.start({ x: "-100vw" });
-    }
-  }, [inView]);
-  const images = [
-    { url: "https://vssut.ac.in/doc/robogames2.jpg" },
-    { url: "https://vssut.ac.in/doc/robogames1.jpg" },
-    { url: "https://vssut.ac.in/doc/samavesh.jpg" },
-    { url: "http://vssut.ac.in/doc/robotics-school-wokshop.jpg" },
-  ];
-
   return (
-    <div ref={ref} bg="#85B5C6" h="680px" id="AboutSection">
+    <div id="AboutSection">
       <div className="aboutcontent">
         <p className="about_title">AIM</p>
         <p className="aimcontent">
@@ -41,7 +21,7 @@ function AboutSection() {
           strength of character, leadership and self-attainment.
         </p>
         <p className="about_title">ABOUT</p>
-        <motion.div animate={animation} className="aimcontent">
+        <div className="aimcontent">
           The Robotics Club is an
           <span className="capitalize"> OFFICIAL TECHNICAL club</span> of VSSUT,
           Burla which encourages various technical activities and projects in
@@ -50,7 +30,7 @@ function AboutSection() {
           acute zest for learning technological advancements and happenings in
           the modern world, and endeavour in applying the theoretical learning
           into realistic projects.
-        </motion.div>
+        </div>
       </div>
       <div className="vdo">
         <iframe

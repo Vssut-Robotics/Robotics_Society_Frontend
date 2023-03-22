@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap');
 
 #LandingSection {
-    backdrop-filter: blur(1.4px);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
