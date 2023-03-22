@@ -1,24 +1,14 @@
 import "./App.css";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import HomeScreen from "./screens/HomeScreen";
 import Nav from "./components/Nav";
-import LandingSection from "./components/LandingSection";
-import AboutSection from "./components/AboutSection";
-import ProjectSection from "./components/ProjectSection";
-import AchievmentSection from "./components/AchievmentSection";
-import ContactSection from "./components/ContactSection";
 
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
-        <Nav />
-      </div>
-      <div className="section">
-        <LandingSection />
-        <AboutSection />
-        <ProjectSection />
-        <AchievmentSection />
-        <ContactSection />
-      </div>
+      <HomeScreen/>
     </div>
   );
 }
