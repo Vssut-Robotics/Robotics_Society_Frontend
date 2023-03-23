@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:wght@400;700&display=swap');
 
 .MuiButton-contained {
-  text-transform: lowercase !important;
+  text-transform: capitalize !important;
+  font-family: 'GFS Neohellenic', sans-serif;
 }
 
 .spinner {

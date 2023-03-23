@@ -60,7 +60,7 @@ function TeamSection() {
         </div>
         <Box className="student_dignitary">
           <div className="profileimg">
-            <img src="https://i.imgur.com/pUf6yEj.jpg" alt="" />
+            <img src="https://i.imgur.com/wEZKqRo.jpg" alt="" />
           </div>
           <div className="designation">
             <p> Ashwati M</p>
