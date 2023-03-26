@@ -20,7 +20,7 @@ function Nav() {
           <Link to="#AboutSection">About</Link>
           <Link to="#ProjectSection">Project</Link>
           <Link to="#AchievmentSection">Achievment</Link>
-          <Link to="#TeamSection">Team</Link>
+          <Link to="/team">Team</Link>
           <Link to="#ContactSection" className="contactLink">
             <Button sx={{ bgcolor: "#FFOOC" }} variant="contained">
               Contact

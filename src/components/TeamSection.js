@@ -4,75 +4,97 @@ import { useDispatch, useSelector } from "react-redux";
 import { listMembers } from "../actions/MemberAction";
 import "../styles/TeamSectionStyle.css";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "../styles/slick.css";
+import "../styles/slick-theme.css";
 
 function TeamSection() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    arrows: false,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <section id="TeamSection">
-      <p className="section_title">COLLEGE DIGNATARIES</p>
-      <SimpleGrid column={2} spacing={10} minChildWidth="250px">
-        <Box className="dignitary">
-          <div className="profileimg">
-            <img src="https://www.vssut.ac.in/doc/vc-2022.jpg" alt="" />
-          </div>
-          <div className="designation">
-            <p> Prof. Banshidhar Majhi</p>
-            <p>Vice Chancellor, VSSUT</p>
-          </div>
-        </Box>
-        <Box className="dignitary">
-          <div className="profileimg">
-            <img src="https://i.imgur.com/yN21RIX.jpg" alt="" />
-          </div>
-          <div className="designation">
-            <p> Prof. Sanjaya Kumar Patro</p>
-            <p>Dean, Students' Welfare VSSUT</p>
-          </div>
-        </Box>
-        <Box className="dignitary">
-          <div className="profileimg">
-            <img src="https://i.imgur.com/5dNhi5U.jpg" alt="" />
-          </div>
-          <div className="designation">
-            <p>Mr. Bidyadhar Rout</p>
-            <p>Vice-President Technical Society</p>
-          </div>
-        </Box>
-        <Box className="dignitary">
-          <div className="profileimg">
-            <img src=" https://i.imgur.com/dInKcjK.png" alt="" />
-          </div>
-
-          <div className="designation">
-            <p>Dr. Santosh Kumar Sahu</p>
-            <p>Faculty Advisor Robotics Society</p>
-          </div>
-        </Box>
-      </SimpleGrid>
-      <SimpleGrid spacing={10} minChildWidth="250px" className="student">
-        <div className="student_dignitary">
-          <div className="profileimg">
-            <img src="https://i.imgur.com/pUf6yEj.jpg" alt="" />
-          </div>
-          <div className="designation">
-            <p> Chirag Pradhan</p>
-            <p>Co-ordinator</p>
-          </div>
+      <Slider className="slider_caraousel" {...settings}>
+        <div>
+          <Box className="dignitary">
+            <div className="profileimg">
+              <img src="https://odishabytes.com/wp-content/uploads/2021/06/Prof-Banshidar-Majhi.jpg.webp" alt="" />
+            </div>
+            <div className="designation">
+              <p> Prof. Banshidhar Majhi</p>
+              <p>Vice Chancellor, VSSUT</p>
+            </div>
+          </Box>
         </div>
-        <Box className="student_dignitary">
-          <div className="profileimg">
-            <img src="https://i.imgur.com/wEZKqRo.jpg" alt="" />
-          </div>
-          <div className="designation">
-            <p> Ashwati M</p>
-            <p>Asst. Co-ordinator</p>
-          </div>
-        </Box>
-        <Box className="student_dignitary">
-          <Link to="/team">
-            <button>Click Me</button>
-          </Link>
-        </Box>
-      </SimpleGrid>
+        <div>
+          <Box className="dignitary">
+            <div className="profileimg">
+              <img src="https://i.imgur.com/yN21RIX.jpg" alt="" />
+            </div>
+            <div className="designation">
+              <p> Prof. Sanjaya Kumar Patro</p>
+              <p>Dean, Students' Welfare VSSUT</p>
+            </div>
+          </Box>
+        </div>
+        <div>
+          <Box className="dignitary">
+            <div className="profileimg">
+              <img src="https://i.imgur.com/5dNhi5U.jpg" alt="" />
+            </div>
+            <div className="designation">
+              <p>Mr. Bidyadhar Rout</p>
+              <p>Vice-President Technical Society</p>
+            </div>
+          </Box>
+        </div>
+        <div>
+          <Box className="dignitary">
+            <div className="profileimg">
+              <img src=" https://i.imgur.com/dInKcjK.png" alt="" />
+            </div>
+            <div className="designation">
+              <p>Dr. Santosh Kumar Sahu</p>
+              <p>Faculty Advisor Robotics Society</p>
+            </div>
+          </Box>
+        </div>
+      </Slider>
     </section>
   );
 }

@@ -10,9 +10,6 @@
 
 }
 
-.ref {
-    visibility: none;
-}
 
 .aboutcontent {
     display: flex;
@@ -21,6 +18,7 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 10px;
+    padding-left: 10px;
     flex-direction: column;
     color: white;
 }

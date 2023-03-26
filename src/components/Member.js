@@ -42,7 +42,7 @@ function Member({ member, profileImg }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
-    <Grid item className="member_card_1" xs={12} sm={12} md={12} lg={6} xl={4}>
+    <Grid item className="member_card_1" xs={12} sm={12} md={6} lg={6} xl={4}>
       <Card
         onClick={handleOpen}
         variant="outlined"
