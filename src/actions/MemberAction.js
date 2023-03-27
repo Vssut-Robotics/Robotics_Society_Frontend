@@ -8,7 +8,7 @@ import {
 export const listMembers = (year) => async (dispatch) => {
   try {
     dispatch({ type: MEMBERS_LIST_REQUEST });
-    const { data } = await axios.get(`/api/members?year=${year}`);
+    const { data } = await axios.get(`api/members?year=${year}`);
 
     dispatch({
       type: MEMBERS_LIST_SUCCESS,
