@@ -6,16 +6,12 @@ import {
   Paper,
   Grid,
   IconButton,
+  Box
 } from "@mui/material";
 import Card from "react-animated-3d-card";
-
 import React, { useState } from "react";
 import "../styles/MemberStyle.css";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { SimpleGrid } from "@chakra-ui/react";
 import AutoFitImage from "react-image-autofit-frame";
-import { Box, ThemeProvider, createTheme } from "@mui/system";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -44,7 +40,7 @@ function Member({ member, profileImg }) {
   const handleClose = () => setOpen(false);
   return (
     <Grid item className="member_card_1" xs={12} sm={6} md={4} lg={3} xl={3}>
-      <Card
+      <Box
         onClick={handleOpen}
         variant="outlined"
         elevation={3}
@@ -63,7 +59,7 @@ function Member({ member, profileImg }) {
             View Profile
           </Button>
         </div>
-      </Card>
+      </Box>
       <Modal
         open={open}
         onClose={handleClose}

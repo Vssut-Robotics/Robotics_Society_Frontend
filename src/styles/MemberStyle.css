@@ -1,13 +1,8 @@
-
 .grid {
     height: 200px;
     margin: 25px;
 }
-.member_card_1
-{
-    display: flex;
-    justify-content: center;
-}
+
 
 .ModalBox {
     position: absolute;
@@ -24,10 +19,11 @@
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(7.5px);
 }
-.member_details p
-{
+
+.member_details p {
     margin: 5px;
 }
+
 .grid>img {
     width: 200px;
     height: inherit;
