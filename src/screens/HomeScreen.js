@@ -23,7 +23,7 @@ function HomeScreen() {
           <ProjectSection />
           <AchievmentSection />
           <ContactSection />
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </div>

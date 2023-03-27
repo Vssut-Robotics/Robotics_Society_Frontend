@@ -16,18 +16,20 @@ function Footer() {
         ></iframe>
       </div>
       <div div className="contact_details">
-        <p>Contact Details </p>
-        <div className="phone">
-          <p>Phone: </p>
-          <a href="tel:+917205273725">
-            <span> </span>+917205273725
-          </a>
-        </div>
-        <div className="email">
-          <p>Email: </p>
-          <a href="mail to:vssutrobocon2015@gmail.com">
-            <span> </span>vssutrobocon2015@gmail.com
-          </a>
+        <div className="contact">
+          <p>Contact Details </p>
+          <div className="phone">
+            <p>Phone: </p>
+            <a href="tel:+917205273725">
+              <span> </span>+917205273725
+            </a>
+          </div>
+          <div className="email">
+            <p>Email: </p>
+            <a href="mail to:vssutrobocon2015@gmail.com">
+              <span> </span>vssutrobocon2015@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </div>

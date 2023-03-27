@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "proxy":"https://devroboticssociety.pythonanywhere.com",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.5.2",
