@@ -12,7 +12,8 @@ function SecondYearComponent({ year }) {
 
   useEffect(() => {
     dispatch(listMembers(year));
-    console.log(year);
+    console.log(members);
+
   }, [dispatch]);
 
   return (
