@@ -19,7 +19,7 @@ function ThirdYearComponent({ year }) {
       {loading == true ? (
         <CircularProgress />
       ) : (
-        <Grid container className="memberContainer" lg={12} spacing={2}>
+        <Grid container className="memberContainer" spacing={2}>
           {members && Array.isArray(members)
             ? members.map((member) => (
                 <Member member={member} profileImg={member.profile} />
