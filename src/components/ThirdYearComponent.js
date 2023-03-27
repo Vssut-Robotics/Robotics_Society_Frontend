@@ -12,17 +12,18 @@ function ThirdYearComponent({ year }) {
 
   useEffect(() => {
     dispatch(listMembers(year));
-    console.log(members);
   }, [dispatch]);
   return (
     <div className="ThirdYearComponent">
-      <Grid container className="memberContainer" spacing={2}>
-        {members && Array.isArray(members)
-          ? members.map((member) => (
-              <Member member={member} profileImg={member.profile} />
-            ))
-          : null}
-      </Grid>
+      {loading == true ? null : (
+        <Grid container className="memberContainer" lg={12} spacing={2}>
+          {members && Array.isArray(members)
+            ? members.map((member) => (
+                <Member member={member} profileImg={member.profile} />
+              ))
+            : null}
+        </Grid>
+      )}
     </div>
   );
 }

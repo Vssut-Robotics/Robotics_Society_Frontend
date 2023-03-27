@@ -7,6 +7,7 @@ import AchievmentSection from "../components/AchievmentSection";
 import ContactSection from "../components/ContactSection";
 import TeamSection from "../components/TeamSection";
 import Particle from "../components/Particle";
+import Footer from "../components/Footer";
 
 function HomeScreen() {
   return (
@@ -15,9 +16,6 @@ function HomeScreen() {
         <Particle />
       </div>
       <div className="div2">
-        <div className="navbar">
-          <Nav />
-        </div>
         <div className="section">
           <LandingSection />
           <AboutSection />
@@ -25,6 +23,7 @@ function HomeScreen() {
           <ProjectSection />
           <AchievmentSection />
           <ContactSection />
+          <Footer/>
         </div>
       </div>
     </div>

@@ -1,14 +1,15 @@
 .TeamScreen {
-
     background: #091527;
     position: fixed;
     overflow-y: scroll;
     width: 100%;
     height: 100%;
-    top: 0px;
     left: 0px;
+    overflow-x: hidden;
 }
 
 .memberContainer {
+    position: absolute;
     width: 100%;
+    top:80px;
 }

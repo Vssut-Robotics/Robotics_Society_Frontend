@@ -53,7 +53,7 @@ function TeamScreen() {
 
   return (
     <div className="TeamScreen">
-      <Box>
+      <Box className="memberContainer">
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={value}

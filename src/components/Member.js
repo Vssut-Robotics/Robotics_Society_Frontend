@@ -42,7 +42,7 @@ function Member({ member, profileImg }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
-    <Grid item className="member_card_1" xs={12} sm={12} md={6} lg={6} xl={4}>
+    <Grid item className="member_card_1" xs={12} sm={6} md={4} lg={3} xl={3}>
       <Card
         onClick={handleOpen}
         variant="outlined"
@@ -59,7 +59,7 @@ function Member({ member, profileImg }) {
         </div>
         <div className="more_button">
           <Button sx={{ fontFamily: "GFS Neohellenic", fontWeight: "800" }}>
-            More
+            View Profile
           </Button>
         </div>
       </Card>
@@ -91,13 +91,11 @@ function Member({ member, profileImg }) {
             >
               Twitter
             </Button>
-            <Button
-              startIcon={<LinkedInIcon />}
-              variant="contained"
-              onClick={() => window.open(member.linkedinLInk, "_blank")}
-            >
-              LinkedIn
-            </Button>
+            <a href="https://www.linkedin.com/in/makwy1424/" target="_blank">
+              <Button startIcon={<LinkedInIcon />} variant="contained">
+                LinkedIn
+              </Button>
+            </a>
           </div>
           <Button onClick={handleClose}>Close</Button>
         </Box>
