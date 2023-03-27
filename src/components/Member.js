@@ -1,60 +1,108 @@
 import {
-  Card,
   Button,
   Typography,
   CardActionArea,
-  CardActions,
+  Modal,
   Paper,
   Grid,
+  IconButton,
 } from "@mui/material";
-import React from "react";
+import Card from "react-animated-3d-card";
+
+import React, { useState } from "react";
 import "../styles/MemberStyle.css";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { SimpleGrid } from "@chakra-ui/react";
 import AutoFitImage from "react-image-autofit-frame";
 import { Box, ThemeProvider, createTheme } from "@mui/system";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+// const style = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+//   width: 200,
+//   bgcolor: "#fff",
+//   border: "2px solid #000",
+//   borderRadius:"20px",
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 function Member({ member, profileImg }) {
-  const theme = createTheme({
-    palette: {
-      background: {
-        paper: "#EFF7FF",
-      },
-      text: {
-        primary: "#173A5E",
-        secondary: "#46505A",
-      },
-      action: {
-        active: "#001E3C",
-      },
-      success: {
-        dark: "#009688",
-      },
-    },
-  });
-
   const profilepic =
     "https://devroboticssociety.pythonanywhere.com/" +
     { profileImg }.profileImg;
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
-    <div className="MemberDiv">
-      <div className="member_boc">
-        <Card
-          variant="outlined"
-          style={{ backgroundColor: "#00B2DF", backdropFilter:"blur(7.5px)" }}
-          elevation={3}
-          className="member_card"
-        >
-          <Grid item xs={12} sm={12} md={12} lg={6} xl={4}>
-            <div className="grid">
-              <img src={profilepic} alt="" />
-            </div>
-          </Grid>
+    <Grid item className="member_card_1" xs={12} sm={12} md={6} lg={6} xl={4}>
+      <Card
+        onClick={handleOpen}
+        variant="outlined"
+        elevation={3}
+        style={{ height: "320px", backgroundColor: "rgba(9,21,39, 0.8)" }}
+        shineStrength={0.6}
+        className="member_card"
+      >
+        <div className="grid">
+          <img src={profilepic} alt="" />
+        </div>
+        <div className="member_name">
           <p>{member.name}</p>
-        </Card>
-      </div>
-    </div>
+        </div>
+        <div className="more_button">
+          <Button sx={{ fontFamily: "GFS Neohellenic", fontWeight: "800" }}>
+            More
+          </Button>
+        </div>
+      </Card>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box className="ModalBox">
+          <div className="member_details">
+            <p>Name: {member.name}</p>
+            <p>Branch: {member.branch}</p>
+            <p>Domain: {member.domain}</p>
+          </div>
+          <div className="social_media">
+            <Button
+              startIcon={<GitHubIcon />}
+              variant="contained"
+              sx={{ backgroundColor: "black" }}
+              onClick={() => window.open(member.githubLink, "_blank")}
+            >
+              Github
+            </Button>
+            <Button
+              startIcon={<TwitterIcon />}
+              variant="contained"
+              onClick={() => window.open(member.twitterLink, "_blank")}
+            >
+              Twitter
+            </Button>
+            <Button
+              startIcon={<LinkedInIcon />}
+              variant="contained"
+              onClick={() => window.open(member.linkedinLInk, "_blank")}
+            >
+              LinkedIn
+            </Button>
+          </div>
+          <Button onClick={handleClose}>Close</Button>
+        </Box>
+      </Modal>
+    </Grid>
   );
 }
 

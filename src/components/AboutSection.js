@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import { Flex, Box } from "@chakra-ui/react";
 import "../styles/AboutSectionStyle.css";
-import SimpleImageSlider from "react-simple-image-slider";
 import { Container, Typography } from "@mui/material";
 import "@fontsource/gfs-neohellenic";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Parallax } from "react-scroll-parallax";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css/animate.min.css";
 
 function AboutSection() {
+
+
   return (
     <div id="AboutSection">
       <div className="aboutcontent">

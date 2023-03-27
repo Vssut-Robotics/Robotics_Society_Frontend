@@ -8,6 +8,10 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TeamScreen from "./screens/TeamScreen";
 import Nav from "./components/Nav";
+import FinalYearComponent from "./components/FinalYearComponent";
+import FirstYearComponent from "./components/FirstYearComponent";
+import ThirdYearComponent from "./components/ThirdYearComponent";
+import SecondYearComponent from "./components/SecondYearComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +24,10 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/team" Component={TeamScreen} />
+        <Route path="/team/finalyear" Component={FinalYearComponent} />
+        <Route path="/team/pre-finalyear" Component={ThirdYearComponent} />
+        <Route path="/team/second-year" Component={SecondYearComponent} />
+        <Route path="/team/first-year" Component={FirstYearComponent} />
       </Routes>
     </Router>
   </Provider>

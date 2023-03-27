@@ -22,7 +22,7 @@ function LandingSection() {
 
       <div className="title">
         <p>VSSUT ROBOTICS</p>
-        <span className="tagline">WHERE IMMAGINATION MEETS INNOVATION</span>
+        <span className="tagline">WHERE IMAGINATION MEETS INNOVATION</span>
       </div>
 
       {/* <div className="socialmedia">
