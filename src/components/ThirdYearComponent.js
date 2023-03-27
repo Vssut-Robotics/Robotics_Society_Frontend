@@ -12,7 +12,7 @@ function ThirdYearComponent({ year }) {
 
   useEffect(() => {
     dispatch(listMembers(year));
-    console.log(members);
+    
   }, [dispatch]);
   return (
     <div className="ThirdYearComponent">

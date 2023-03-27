@@ -38,6 +38,7 @@ function Member({ member, profileImg }) {
     "https://devroboticssociety.pythonanywhere.com/" +
     { profileImg }.profileImg;
 
+  console.log(member);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
