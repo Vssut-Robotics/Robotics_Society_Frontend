@@ -92,11 +92,13 @@ function Member({ member, profileImg }) {
             >
               Twitter
             </Button>
-            <a href="https://www.linkedin.com/in/makwy1424/" target="_blank">
-              <Button startIcon={<LinkedInIcon />} variant="contained">
-                LinkedIn
-              </Button>
-            </a>
+            <Button
+              startIcon={<LinkedInIcon />}
+              onClick={() => window.open(member.linkedinLInk, "_blank")}
+              variant="contained"
+            >
+              LinkedIn
+            </Button>
           </div>
           <Button onClick={handleClose}>Close</Button>
         </Box>
