@@ -6,7 +6,7 @@ import {
   Paper,
   Grid,
   IconButton,
-  Box
+  Box,
 } from "@mui/material";
 import Card from "react-animated-3d-card";
 import React, { useState } from "react";
@@ -34,7 +34,7 @@ function Member({ member, profileImg }) {
     "https://devroboticssociety.pythonanywhere.com/" +
     { profileImg }.profileImg;
 
-  console.log(member);
+  // console.log(member);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

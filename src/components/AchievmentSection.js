@@ -6,9 +6,15 @@ import { Card, Grid, Paper } from "@mui/material";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 
+
 function AchievmentSection() {
   var jsonPath = require("../jsonFolder/Achievment.json");
   const achievements = jsonPath.achievments;
+
+
+  const callback = function (index) {
+    console.log("callback", index);
+  };
 
   return (
     <section id="AchievmentSection">
@@ -32,6 +38,14 @@ function AchievmentSection() {
           ))}
         </Grid>
       </div>
+      {/* <div className="newspaper_caraousel">
+        <Carousel
+          slides={slides}
+          autoplay={true}
+          interval={1000}
+          onSlideChange={callback}
+        />
+      </div> */}
     </section>
   );
 }

@@ -1,11 +1,8 @@
 .footer {
     position: relative;
     display: flex;
-    height: 400px;
     background: black;
     right: 0;
-
-
 }
 
 .map {
@@ -16,22 +13,27 @@
 }
 
 .map>iframe {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
     object-fit: contain;
 }
 
 .contact_details {
     display: flex;
     width: 50%;
+    height: inherit;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    align-items: center;
 }
 
 .contact {
     height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
 }
 
 .contact p {
@@ -54,9 +56,8 @@ a {
     font-size: 20px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 670px) {
     .footer {
-        height: 500px;
         flex-direction: column;
     }
 

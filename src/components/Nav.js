@@ -19,6 +19,7 @@ function Nav() {
           <Link to="/">Home</Link>
           <Link to="/#AboutSection">About</Link>
           <Link to="/#ProjectSection">Project</Link>
+          {/* <Link to="/events">Event</Link> */}
           <Link to="/#AchievmentSection">Achievment</Link>
           <Link to="/team">Team</Link>
           <Link to="#ContactSection" className="contactLink">
