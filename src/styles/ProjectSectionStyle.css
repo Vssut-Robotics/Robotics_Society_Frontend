@@ -25,6 +25,13 @@
     justify-content: center;
 
 }
+.develop
+{
+    padding-top:10px;
+    color:white;
+    font-size: 20px;
+}
+
 
 .ModalBox {
     position: absolute;
@@ -40,6 +47,7 @@
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(7.5px);
     font-size: 20px;
+    overflow-y: scroll;
 }
 
 .pagetitle p {

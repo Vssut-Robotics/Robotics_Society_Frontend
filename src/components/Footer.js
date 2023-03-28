@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import "../styles/FooterStyle.css";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Footer() {
   return (
@@ -34,11 +35,29 @@ function Footer() {
               </a>
             </p>
           </div>
-          <div className="address">
-            <p>
-              Address: Student Activity Centre <br /> VSSUT BURLA,768018
-            </p>
+
+          <br></br>
+          <div className="useful_Link">
+            <p>Useful Links</p>
+            <ul>
+              <li>
+                <Link to="/#AboutSection">About</Link>
+              </li>
+              <li>
+                <Link to="/#ProjectSection">Project</Link>
+              </li>
+              <li>
+                <Link to="/#AchievmentSection">Achievment</Link>
+              </li>
+              <li>
+                <Link to="/team">Team</Link>
+              </li>
+              <li>
+                <Link to="#ContactSection">Contact</Link>
+              </li>
+            </ul>
           </div>
+          <div className="develop">Copyright By: VSSUT ROBOTICS 2023</div>
         </div>
       </div>
     </div>
