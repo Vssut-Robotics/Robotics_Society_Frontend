@@ -6,6 +6,7 @@ import { HashLink as Link } from "react-router-hash-link";
 function Footer() {
   return (
     <div className="footer">
+      
       <div className="map">
         <iframe
           id="gmap_canvas"

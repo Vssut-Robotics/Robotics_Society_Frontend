@@ -26,20 +26,46 @@ function ContactSection() {
   };
   return (
     <section id="ContactSection">
-      <div className="form">
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input required placeholder="Enter Your Name" type="text" name="user_name" />
-          <label>Email</label>
-          <input
-            placeholder="Enter your Email Address"
-            type="email"
-            name="user_email"
+      <div className="pagetitle">
+        <p>CONTACT US</p>
+      </div>
+      <div className="form_space">
+        <div className="form">
+          <form ref={form} onSubmit={sendEmail}>
+            <label>Name</label>
+            <input
+              required
+              placeholder="Enter Your Name"
+              type="text"
+              name="user_name"
+            />
+            <label>Email</label>
+            <input
+              placeholder="Enter your Email Address"
+              type="email"
+              name="user_email"
+            />
+            <label>Message</label>
+            <textarea
+              required
+              placeholder="Enter your message"
+              name="message"
+            />
+            <input
+              required
+              className="submitButton"
+              type="submit"
+              value="Send"
+            />
+          </form>
+        </div>
+        <div className="illustration">
+          <img
+            src="https://cdni.iconscout.com/illustration/premium/thumb/online-application-form-4472034-3748858.png"
+            alt=""
+            srcset=""
           />
-          <label>Message</label>
-          <textarea required placeholder="Enter your message" name="message" />
-          <input required className="submitButton" type="submit" value="Send" />
-        </form>
+        </div>
       </div>
     </section>
   );

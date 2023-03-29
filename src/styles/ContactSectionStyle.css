@@ -1,56 +1,85 @@
-#ContactSection
-{
-    height: 680px;
+#ContactSection {
     width: 100%;
     background: #091527;
 }
-.form{
+
+.form_space {
     display: flex;
-    width: 100%;
-    justify-content: center;   
 }
-.form > form 
-{
+
+.illustration {
     display: flex;
-    margin-top: 100px;
+    justify-content: center;
+    width: 50%;
+    
+}
+
+.form {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form>form {
+    display: flex;
     width: 90%;
     flex-direction: column;
 }
-.form form input
-{
-    height:30px;
+
+.form form input {
+    height: 30px;
     border-radius: 10px;
     padding: 5px;
-    background:  rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, .1);
     color: white;
 }
-.form form label
-{
+
+.form form label {
     color: white;
     font-size: larger;
     padding-top: 5px;
 }
-.form form textarea
-{
+
+.form form textarea {
     height: 150px;
     border-radius: 10px;
     padding: 5px;
-    background:  rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, .1);
 
 }
-.submitButton
-{
-    margin-top:10px;
+
+.submitButton {
+    margin-top: 10px;
     display: flex;
     width: 50%;
     background: #034B9F;
 }
 
-.form form input:hover
-{
+.form form input:hover {
     border: 2px solid #E40E18;
 }
-.form form input:active
-{
+
+.form form input:active {
     border: 2px solid #E40E18;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .form_space {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .illustration  {
+        width: 100%;
+    }
+    .illustration img
+    {
+        width: 80%;
+        object-fit: contain;
+    }
 }

@@ -1,5 +1,36 @@
-.EventScreen{
+.EventScreen {
+    background: #091527;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    padding-top: 80px;
+}
+
+.PastGrid {
+    background: #091527;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.event p,h2 {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    padding-top: 5px;
+    color: white;
+    transform: ease-in 2s;
     
-    background: black;
-    height:100%;
+}
+
+
+.event img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
 }

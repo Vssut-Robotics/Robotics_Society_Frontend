@@ -15,17 +15,32 @@
     align-items: center;
 }
 
+.pagetitle {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+
+}
+
+.pagetitle p {
+    font-size: 3rem;
+    margin: 20px;
+    text-align: center;
+    color: white;
+}
+
 .map>iframe {
     width: 250px;
     height: 250px;
     padding: 20px;
     object-fit: contain;
 }
-li
-{
-color: white;
-cursor: pointer;
+
+li {
+    color: white;
+    cursor: pointer;
 }
+
 .contact_details {
     display: flex;
     width: 50%;
