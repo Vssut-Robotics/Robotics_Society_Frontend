@@ -1,15 +1,15 @@
 import axios from "axios";
 import {
-  MEMBERS_LIST_FAIL,
-  MEMBERS_LIST_REQUEST,
-  MEMBERS_LIST_SUCCESS,
-} from "../constants/MemberConstants";
+  PROJECTS_LIST_FAIL,
+  PROJECTS_LIST_REQUEST,
+  PROJECTS_LIST_SUCCESS,
+} from "../constants/ProjectConstants";
 
-export const listMembers = (year) => async (dispatch) => {
+export const listProjects = () => async (dispatch) => {
   try {
-    dispatch({ type: MEMBERS_LIST_REQUEST });
+    dispatch({ type: PROJECTS_LIST_REQUEST });
     const { data } = await axios.get(
-      `https://devroboticssociety.pythonanywhere.com/api/members?year=${year}`
+      `https://devroboticssociety.pythonanywhere.com/api/projects`
     );
 
     const config = {
@@ -19,12 +19,12 @@ export const listMembers = (year) => async (dispatch) => {
     };
 
     dispatch({
-      type: MEMBERS_LIST_SUCCESS,
+      type: PROJECTS_LIST_SUCCESS,
       payload: data,
     });
   } catch (error) {
     dispatch({
-      type: MEMBERS_LIST_FAIL,
+      type: PROJECTS_LIST_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

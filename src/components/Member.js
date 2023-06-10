@@ -6,16 +6,12 @@ import {
   Paper,
   Grid,
   IconButton,
+  Box,
 } from "@mui/material";
 import Card from "react-animated-3d-card";
-
 import React, { useState } from "react";
 import "../styles/MemberStyle.css";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { SimpleGrid } from "@chakra-ui/react";
 import AutoFitImage from "react-image-autofit-frame";
-import { Box, ThemeProvider, createTheme } from "@mui/system";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -38,12 +34,13 @@ function Member({ member, profileImg }) {
     "https://devroboticssociety.pythonanywhere.com/" +
     { profileImg }.profileImg;
 
+  // console.log(member);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
-    <Grid item className="member_card_1" xs={12} sm={12} md={6} lg={6} xl={4}>
-      <Card
+    <Grid item className="member_card_1" xs={12} sm={6} md={4} lg={3} xl={3}>
+      <Box
         onClick={handleOpen}
         variant="outlined"
         elevation={3}
@@ -59,10 +56,10 @@ function Member({ member, profileImg }) {
         </div>
         <div className="more_button">
           <Button sx={{ fontFamily: "GFS Neohellenic", fontWeight: "800" }}>
-            More
+            View Profile
           </Button>
         </div>
-      </Card>
+      </Box>
       <Modal
         open={open}
         onClose={handleClose}
@@ -93,8 +90,8 @@ function Member({ member, profileImg }) {
             </Button>
             <Button
               startIcon={<LinkedInIcon />}
-              variant="contained"
               onClick={() => window.open(member.linkedinLInk, "_blank")}
+              variant="contained"
             >
               LinkedIn
             </Button>

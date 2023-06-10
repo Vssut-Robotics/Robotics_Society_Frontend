@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listMembers } from "../actions/MemberAction";
 import Member from "../components/Member";
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, CircularProgress } from "@mui/material";
 import "../styles/TeamScreenStyle.css";
 
 function ThirdYearComponent({ year }) {
@@ -12,17 +12,21 @@ function ThirdYearComponent({ year }) {
 
   useEffect(() => {
     dispatch(listMembers(year));
-    console.log(members);
+    
   }, [dispatch]);
   return (
     <div className="ThirdYearComponent">
-      <Grid container className="memberContainer" spacing={2}>
-        {members && Array.isArray(members)
-          ? members.map((member) => (
-              <Member member={member} profileImg={member.profile} />
-            ))
-          : null}
-      </Grid>
+      {loading == true ? (
+        <CircularProgress />
+      ) : (
+        <Grid container className="memberContainer" spacing={2}>
+          {members && Array.isArray(members)
+            ? members.map((member) => (
+                <Member member={member} profileImg={member.profile} />
+              ))
+            : null}
+        </Grid>
+      )}
     </div>
   );
 }

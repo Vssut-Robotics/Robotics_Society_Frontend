@@ -16,12 +16,13 @@ function Nav() {
       <header className="navheader">
         <img src="https://i.imgur.com/DiBqJ0j.png" alt="" className="logo" />
         <div className={`navlinks  ${showNavbar && "active"}`}>
-          <Link to="#">Home</Link>
-          <Link to="#AboutSection">About</Link>
-          <Link to="#ProjectSection">Project</Link>
-          <Link to="#AchievmentSection">Achievment</Link>
+          <Link to="/">Home</Link>
+          <Link to="/#AboutSection">About</Link>
+          <Link to="/#ProjectSection">Project</Link>
+          <Link to="/events">Events</Link>
+          <Link to="/#AchievmentSection">Achievment</Link>
           <Link to="/team">Team</Link>
-          <Link to="#ContactSection" className="contactLink">
+          <Link to="/#ContactSection" className="contactLink">
             <Button sx={{ bgcolor: "#FFOOC" }} variant="contained">
               Contact
             </Button>
@@ -31,7 +32,7 @@ function Nav() {
           <MenuIcon sx={{ color: "white" }} />
         </div>
         <div className="contactbutton">
-          <Link to="#ContactSection">
+          <Link to="/#ContactSection">
             <Button
               sx={{
                 borderColor: "white",

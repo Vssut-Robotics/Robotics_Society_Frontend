@@ -5,9 +5,11 @@ import {
   createwithDevTools,
 } from "redux-devtools-extension";
 import { memeberListReducers } from "./reducers/MemberReducers";
+import { projectListReducers } from "./reducers/ProjectReducers";
 
 const reducer = combineReducers({
   memberlist: memeberListReducers,
+  projectlist: projectListReducers,
 });
 
 const initialState = {};
